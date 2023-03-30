@@ -1,0 +1,33 @@
+#ways to build ui
+
+1) create it in code
+    Button = .....
+    button.x = 100
+    button.y = 100
+
+2) Write it in a UI Language
+    HTML
+    XAML
+    XIB
+
+3) Draw it
+    XCode Interface Builder
+    MS Visual Studio
+    Android Studio
+
+
+3/8/23
+
+MISC
+    A model represents the real world objects represented in the app
+
+    A sketch represents anything on the page (?)
+
+    angular.js |
+    react      | 
+    view       | -these are are all used to build user interfaces
+    svelte     |
+
+
+SVELTE Notes
+    
