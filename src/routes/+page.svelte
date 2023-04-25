@@ -22,13 +22,10 @@
 	
 	info-cards{
 		display: grid;
-		display: inline-block;
+		justify-content: center;	
+		grid-template-columns: repeat(3, 1fr);
 
-		grid-template:
-		"name"
-		"image_url"
-		"description"
-		/min-content;
+
 
 
 	}
@@ -47,7 +44,28 @@
 		name: "crosshair 2",
 		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
 		description: "this is another crosshair"
-	}
+	},
+	{
+		name: "crosshair 2",
+		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
+		description: "this is another crosshair"
+	},
+	{
+		name: "crosshair 2",
+		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
+		description: "this is another crosshair"
+	},
+	{
+		name: "crosshair 2",
+		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
+		description: "this is another crosshair"
+	},
+	{
+		name: "crosshair 2",
+		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
+		description: "this is another crosshair"
+	},
+	
 	]
 	
 </script>	 	

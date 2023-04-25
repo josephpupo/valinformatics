@@ -1,20 +1,4 @@
-<script>
-    import HenrikDevValorantAPI from 'unofficial-valorant-api';
-    //import {writeFileSync} from 'fs';
-    const VAPI = new HenrikDevValorantAPI();
-    
-    /**///function to download crosshair based off
-    ///**
-    //* @param {string} crosshair_code - The string
-    //*/
-    //async function download(crosshair_code){
-    //    const crosshair_data = await VAPI.getCrosshair({code: crosshair_code});
-    //    writeFileSync(`${crosshair_code}.png`, crosshair_data.data);
-    //}
-    
-    
-    
-    
+<script type ="module" src=src/views/xhairgenerator.js>
     
     /**
      * @type {{ name: any; image_url: any; description: any; }}
@@ -31,26 +15,29 @@
 
 <style>
 
-
 infoCard{
+    text-align:center;
     margin: 20px;
     padding: 20px;
     box-shadow: 1px 1px 10px 0px #b2b2b2;
     border-radius: 10px;
+    justify-content: center;
+    grid-template-rows: auto;
 
-    display: grid;  
+        display: grid;  
 
-    grid-template: 
-        "name"
-        "image"
-        "description"
-        /min-content;
+        grid-template: 
+            "name"
+            "image"
+            "description"
+            /min-content;
 
-        column-gap: 10px;
+            column-gap: 10px;
 }
 
 infoCard img{
     grid-area: image;
+    justify-content: center;
     max-height: 100%;
 
 }

@@ -21,6 +21,8 @@
 	"type": "module",
 	"dependencies": {
 		"fs": "^0.0.1-security",
+		"i": "^0.3.7",
+		"npm": "^9.6.5",
 		"unofficial-valorant-api": "^2.3.0-stable.0"
 	}
 }
