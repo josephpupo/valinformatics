@@ -22,6 +22,15 @@
 	
 	info-cards{
 		display: grid;
+		display: inline-block;
+
+		grid-template:
+		"name"
+		"image_url"
+		"description"
+		/min-content;
+
+
 	}
 </style>
 
