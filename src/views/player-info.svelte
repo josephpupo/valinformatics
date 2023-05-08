@@ -1,9 +1,9 @@
-<script type ="module" src=src/views/xhairgenerator.js>
-    
+<script> 
     /**
      * @type {{ name: any; image_url: any; description: any; }}
      */
      export let info
+
 </script>
 
 <infoCard>

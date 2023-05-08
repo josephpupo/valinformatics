@@ -1,6 +1,16 @@
 <div class="header" id= "h1">
 	<h1>valorant informatics</h1>
+
 </div>
+
+<div class="input">
+	<input type = "text" id="code" placeholder="crosshair code">
+</div>
+
+<div class="button">
+	<button type="button" on:click={() => getInputValue()}>submit</button>
+</div>
+
 
 <info-cards>
 	{#each player_info as info}
@@ -8,6 +18,7 @@
 	<PlayerInfo info ={info}></PlayerInfo>
 	{/each}
 </info-cards>
+
 
 
 <style>
@@ -22,14 +33,42 @@
 	
 	info-cards{
 		display: grid;
-		justify-content: center;	
+		justify-content: center;
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.input{
+		display: grid;
+		justify-content: center;
+		margin: auto;
+		padding: 12px 20px;
+		width: auto;
+	}
+
+	::placeholder{
+		text-align: center;
+	}
+
+	.button{
+		display: grid;
+		justify-content: center;
+		box-sizing: border-box;
+		padding: 12px 20px;
 	}
 </style>
 
 
-<script>
+<script type="module">
+
+
 	import PlayerInfo from "/Users/josephpupo/Desktop/CSC190/Valorant Store/valinformatics/src/views/player-info.svelte";
+	
+	function getInputValue(){
+		var value = document.getElementById('code');
+		var code = value?.innerText
+		alert(value);
+	}
+
 	const player_info = [
 	{
 		name: "crosshair",
