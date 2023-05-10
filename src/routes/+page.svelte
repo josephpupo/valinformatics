@@ -8,7 +8,7 @@
 </div>
 
 <div class="button">
-	<button type="button" on:click={() => getInputValue()}>submit</button>
+	<button type="button" on:click={ getInputValue }>submit</button>
 </div>
 
 
@@ -59,15 +59,14 @@
 
 
 <script type="module">
-
-
 	import PlayerInfo from "/Users/josephpupo/Desktop/CSC190/Valorant Store/valinformatics/src/views/player-info.svelte";
 	
-	function getInputValue(){
-		var value = document.getElementById('code');
-		var code = value?.innerText
-		alert(value);
+	function getInputValue(){ //this function gets the input value on clicking the submit button
+		// @ts-ignore
+		var inputValue = document.getElementById("code").value
+		console.log(inputValue)
 	}
+
 
 	const player_info = [
 	{

@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"cross-blob": "^3.0.2",
 		"fs": "^0.0.1-security",
 		"i": "^0.3.7",
 		"npm": "^9.6.5",
