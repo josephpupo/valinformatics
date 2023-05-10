@@ -1,6 +1,6 @@
 <script> 
     /**
-     * @type {{ name: any; image_url: any; description: any; }}
+     * @type {{ name: any; img_url: any; description: any; }}
      */
      export let info
 
@@ -8,7 +8,7 @@
 
 <infoCard>
     <p class = "name">{info.name}</p> 
-    <img alt = {info.name} src = {info.image_url}/>
+    <img alt = {info.name} src = {info.img_url}/>
     <p class = "description">{info.description}</p>
     <button>copy this!</button>
 </infoCard>
@@ -22,7 +22,9 @@ infoCard{
     box-shadow: 1px 1px 10px 0px #b2b2b2;
     border-radius: 10px;
     justify-content: center;
-    grid-template-rows: auto;
+    grid-auto-rows: max-content;
+    grid-template-columns: 1fr 300px;
+    max-width: 100%;
 
         display: grid;  
 
@@ -31,14 +33,13 @@ infoCard{
             "image"
             "description"
             /min-content;
-
-            column-gap: 10px;
 }
 
 infoCard img{
     grid-area: image;
     justify-content: center;
-    max-height: 100%;
+    max-height: 25%     
+    
 
 }
 
@@ -51,7 +52,7 @@ infoCard [class = 'name']{
 
 infoCard [class = 'description']{
     grid-area: description;
-    max-height: 30%;
+    max-height: 100%;
     font-size: 50px;
 }
 

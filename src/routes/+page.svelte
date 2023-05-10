@@ -1,17 +1,37 @@
+<script type="module">
+	import PlayerInfo from "/Users/josephpupo/Desktop/CSC190/Valorant Store/valinformatics/src/views/player-info.svelte";
+	export let data;
+	const player_info = data.crosshair_cards
+	console.log(player_info)
+</script>	
+
+
 <div class="header" id= "h1">
-	<h1>valorant informatics</h1>
+	<h1>valorant crosshair storage</h1>
 
 </div>
 
 <form method="POST">	
 	<input
 		type = "text"
-		id = "code"
-		name = "code"
-		placeholder= "crosshair code"
+		name = "name"
+		placeholder= "name the crosshair"
 	/>
-	<button type="submit" on:click={ getInputValue }>submit</button>
+	<input
+		type = "text"
+		name = "description"
+		placeholder = "describe the crosshair"
+	/>
+	<input
+		type = "text"
+		name = "code"
+		placeholder = "crosshair code"
+	/>
+	<button type="submit">submit</button>
 </form>
+
+
+
 
 
 <info-cards>
@@ -60,49 +80,5 @@
 	}*/
 </style>
 
-
-<script type="module">
-	import PlayerInfo from "/Users/josephpupo/Desktop/CSC190/Valorant Store/valinformatics/src/views/player-info.svelte";
-	
-	async function getInputValue(){ //this function gets the input value on clicking the submit button
-		// @ts-ignore
-		var inputValue = document.getElementById("code").value
-	}
-
-
-	const player_info = [
-	{
-		name: "crosshair",
-		image_url: "https://www.talkesport.com/wp-content/uploads/image-438.png",
-		description: "dawgies crosshair"
-	},
-	{
-		name: "crosshair 2",
-		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
-		description: "this is another crosshair"
-	},
-	{
-		name: "crosshair 2",
-		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
-		description: "this is another crosshair"
-	},
-	{
-		name: "crosshair 2",
-		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
-		description: "this is another crosshair"
-	},
-	{
-		name: "crosshair 2",
-		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
-		description: "this is another crosshair"
-	},
-	{
-		name: "crosshair 2",
-		image_url: "https://www.talkesport.com/wp-content/uploads/image-439.png",
-		description: "this is another crosshair"
-	},
-	
-	]
-	
-</script>	 	
+ 	
 
