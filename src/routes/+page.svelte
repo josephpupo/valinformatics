@@ -3,13 +3,15 @@
 
 </div>
 
-<div class="input">
-	<input type = "text" id="code" placeholder="crosshair code">
-</div>
-
-<div class="button">
-	<button type="button" on:click={ getInputValue }>submit</button>
-</div>
+<form method="POST">	
+	<input
+		type = "text"
+		id = "code"
+		name = "code"
+		placeholder= "crosshair code"
+	/>
+	<button type="submit" on:click={ getInputValue }>submit</button>
+</form>
 
 
 <info-cards>
@@ -37,6 +39,7 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 
+	/*
 	.input{
 		display: grid;
 		justify-content: center;
@@ -49,22 +52,21 @@
 		text-align: center;
 	}
 
-	.button{
+	 .button{
 		display: grid;
 		justify-content: center;
 		box-sizing: border-box;
 		padding: 12px 20px;
-	}
+	}*/
 </style>
 
 
 <script type="module">
 	import PlayerInfo from "/Users/josephpupo/Desktop/CSC190/Valorant Store/valinformatics/src/views/player-info.svelte";
 	
-	function getInputValue(){ //this function gets the input value on clicking the submit button
+	async function getInputValue(){ //this function gets the input value on clicking the submit button
 		// @ts-ignore
 		var inputValue = document.getElementById("code").value
-		console.log(inputValue)
 	}
 
 

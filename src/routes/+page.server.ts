@@ -1,14 +1,20 @@
 import HenrikDevValorantAPI from 'unofficial-valorant-api'
 import {writeFileSync} from 'fs'
-import type {RequestEvent} from "@sveltejs/kit";
 const VAPI = new HenrikDevValorantAPI();
 
-export const GET = async() => {
+export const actions = {
     // @ts-ignore
-    download('0;s;1;P;c;1;o;1;f;0;0l;4;0a;1;0f;0;1b;0')
-    return new Response(JSON.stringify({message: "successful creation"}), {status: 201});
+    default: async ({request}) => {
+        const formData = await request.formData()
+        const code = formData.get('code');
+        console.log(code)
+        download(code)
 
-}
+        return {
+            message: "code submitted"
+        };
+    }
+} 
 
 
 async function download(crosshair_code: any) {
@@ -16,4 +22,3 @@ async function download(crosshair_code: any) {
     // @ts-ignore
     writeFileSync(`${crosshair_code}.png`, crosshair_data.data);
 }
-
